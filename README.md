@@ -116,8 +116,8 @@ docker build -t yituo-hub . && docker run -d -p 80:80 yituo-hub
 
 <table>
 <tr>
-<td width="50%" align="center"><img src="assets/qr-yan.jpg" width="220"><br><sub><b>颜</b> · <a href="https://github.com/yan9651688">yan9651688</a> · 排版引擎与产品</sub></td>
-<td width="50%" align="center"><img src="assets/qr-lanmeng.jpg" width="220"><br><sub><b>蓝梦</b> · <a href="https://github.com/lanmengSakura">lanmengSakura</a> · 动效组件库</sub></td>
+<td width="50%" align="center"><img src="assets/qr-yan.jpg" width="200" height="200"><br><sub><b>颜</b> · <a href="https://github.com/yan9651688">yan9651688</a> · 排版引擎与产品</sub></td>
+<td width="50%" align="center"><img src="assets/qr-lanmeng.jpg" width="200" height="200"><br><sub><b>蓝梦</b> · <a href="https://github.com/lanmengSakura">lanmengSakura</a> · 动效组件库</sub></td>
 </tr>
 </table>
 
