@@ -12,7 +12,7 @@
     var errors = [];
     var warnings = [];
     var frozenAdvancedTemplate = /data-original-system=["']production-template-v6["']/i.test(html)
-      && /data-original-template-release=["']v24-static-final["']/i.test(html);
+      && /data-original-template-release=["'](?:v24-static-final|v25-mobile-type|v26-compact-all|v27-gallery-balanced-all|v28-standard-air|v30-standard402-full-effects)["']/i.test(html);
 
     function err(msg) { errors.push(msg); }
     function warn(msg) { warnings.push(msg); }
@@ -53,7 +53,7 @@
     if (halfCount > 0) warn('发现 ' + halfCount + ' 处中英文混排半角标点（如 ' + halfSamples.join('、') + '）');
 
     /* 代码块禁 white-space:pre（会渲染出大缩进空行） */
-    if (/white-space\s*:\s*pre\b/i.test(html)) warn('代码块使用了 white-space:pre，粘贴后可能出现大缩进');
+    if (/white-space\s*:\s*pre(?:\s*;|\s*["'])/i.test(html)) warn('代码块使用了 white-space:pre，粘贴后可能出现大缩进');
 
     return { errors: errors, warnings: warnings, ok: errors.length === 0 };
   }

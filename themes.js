@@ -316,7 +316,40 @@
     return h + '</section></section>';
   }
 
+  function placeholderRatio(src) {
+    var match = String(src || '').toLowerCase().match(/^placeholder:\/\/(16-9|4-5|2\.35-1)$/);
+    if (!match) return null;
+    if (match[1] === '4-5') return { key: '4-5', label: '4:5', css: '4 / 5', width: '72%' };
+    if (match[1] === '2.35-1') return { key: '2.35-1', label: '2.35:1', css: '2.35 / 1', width: '100%' };
+    return { key: '16-9', label: '16:9', css: '16 / 9', width: '100%' };
+  }
+
+  function buildThemePlaceholder(spec, t, ratio) {
+    var themeName = spec.name || '当前主题';
+    return '<section data-image-kind="theme-placeholder" data-placeholder-theme="' + esc(spec.id || 'base')
+      + '" data-placeholder-ratio="' + ratio.label + '" style="width:' + ratio.width
+      + ';margin:20px auto;text-align:center;">'
+      + '<section data-placeholder-canvas="true" style="box-sizing:border-box;width:100%;aspect-ratio:' + ratio.css
+      + ';min-height:132px;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;'
+      + 'padding:18px 16px;border:1px solid ' + spec.c.border + ';border-radius:10px;background:' + spec.c.tint + ';">'
+      + '<section aria-hidden="true" style="width:58%;max-width:152px;display:flex;align-items:center;margin:0 0 14px;">'
+      + '<span style="flex:1;height:1px;background:' + spec.c.border + ';"></span>'
+      + '<span style="box-sizing:border-box;width:24px;height:24px;margin:0 10px;border:1px solid ' + spec.c.primary
+      + ';border-radius:50%;background:' + spec.c.tint + ';"></span>'
+      + '<span style="width:7px;height:7px;margin-left:-17px;margin-right:10px;border-radius:50%;background:' + spec.c.primary + ';"></span>'
+      + '<span style="flex:1;height:1px;background:' + spec.c.border + ';"></span></section>'
+      + '<p style="margin:0;font-size:10px;line-height:1.5;letter-spacing:.14em;font-weight:750;color:' + spec.c.primary + ';">'
+      + leaf(esc('VISUAL SLOT / ' + ratio.label)) + '</p>'
+      + '<p style="margin:7px 0 0;font-size:13px;line-height:1.65;font-weight:650;color:' + spec.c.deep + ';">'
+      + leaf(txt(themeName + ' · 图片待补充')) + '</p></section>'
+      + (t.alt ? '<p style="margin:8px 0 0;font-size:11.5px;line-height:1.65;color:' + spec.c.sub + ';text-align:left;">'
+        + leaf(txt(t.alt)) + '</p>' : '')
+      + '</section>';
+  }
+
   function buildImage(spec, t) {
+    var ratio = placeholderRatio(t.src);
+    if (ratio) return buildThemePlaceholder(spec, t, ratio);
     return '<section style="margin:20px 0;text-align:center;">'
       + '<img src="' + esc(t.src) + '" alt="' + esc(t.alt || '') + '" style="max-width:100%;height:auto;display:block;margin:0 auto;border-radius:10px;border:1px solid ' + spec.c.border + ';"/>'
       + (t.alt ? '<p style="margin:8px 0 0;font-size:11.5px;color:' + spec.c.sub + ';">' + leaf(txt(t.alt)) + '</p>' : '')

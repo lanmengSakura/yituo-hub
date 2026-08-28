@@ -74,9 +74,11 @@
       <strong>公众号预览</strong>
       <span id="validBadge" class="badge">校验中…</span>
       <span class="spacer"></span>
-      <div class="width-toggle">
-        <button id="widthFit" class="btn tiny ghost active">适应</button>
-        <button id="widthPhone" class="btn tiny ghost">📱 375px</button>
+      <div class="width-toggle" role="group" aria-label="预览设备宽度">
+        <button type="button" class="btn tiny ghost active" data-preview-width="fit" aria-pressed="true" title="最大 500 CSS px 的舒适阅读容器">适应</button>
+        <button type="button" class="btn tiny ghost" data-preview-width="375" aria-pressed="false" title="375 CSS px 小屏预览">小屏 375</button>
+        <button type="button" class="btn tiny ghost" data-preview-width="402" aria-pressed="false" title="402 CSS px 标准屏预览">标准 402</button>
+        <button type="button" class="btn tiny ghost" data-preview-width="440" aria-pressed="false" title="440 CSS px 大屏预览">大屏 440</button>
       </div>
     </div>
     <div class="preview-wrap" id="previewWrap">

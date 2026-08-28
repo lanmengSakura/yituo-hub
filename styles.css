@@ -254,6 +254,8 @@ body {
 
 /* ---------- 蓝梦原创视觉等级（沿用现有胶囊与下拉语言） ---------- */
 .level-picker-slot { position: relative; display: inline-flex; }
+.level-picker-slot[hidden],
+.motion-mode-btn[hidden] { display: none !important; }
 .level-picker-btn { max-width: 220px; }
 .level-index {
   display: inline-flex;
@@ -516,10 +518,27 @@ body {
 .badge.bad { background: #FBF0EE; color: var(--bad); border-color: #F0D9D5; cursor: pointer; }
 .badge.warn { background: #FBF5EB; color: var(--warn); border-color: #EFE2CC; cursor: pointer; }
 
-.width-toggle { display: flex; gap: 6px; }
-.preview-wrap { flex: 1; min-height: 0; display: flex; justify-content: center; background: #EDF0F3; overflow: auto; }
-#preview { border: 0; background: #fff; width: 100%; height: 100%; }
-.preview-wrap.phone #preview { width: 375px; box-shadow: 0 0 0 1px var(--line), 0 14px 40px rgba(29, 48, 69, 0.12); }
+.width-toggle { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.preview-wrap { flex: 1; min-height: 0; display: flex; align-items: flex-start; justify-content: center; background: #EDF0F3; overflow: auto; }
+#preview { border: 0; background: #fff; width: 100%; min-height: 100%; flex: 0 0 100%; }
+.preview-wrap.readable #preview {
+  width: min(500px, 100%);
+  flex-basis: min(500px, 100%);
+  margin-inline: auto;
+  box-shadow: 0 0 0 1px var(--line), 0 14px 40px rgba(29, 48, 69, 0.12);
+}
+.preview-wrap.device #preview {
+  width: var(--preview-width);
+  flex-basis: var(--preview-width);
+  margin-inline: auto;
+  box-shadow: 0 0 0 1px var(--line), 0 14px 40px rgba(29, 48, 69, 0.12);
+}
+
+@media (min-width: 901px) {
+  html, body { height: 100%; }
+  body { min-height: 0; overflow: hidden; }
+  .workspace { min-height: 0; }
+}
 
 .valid-panel {
   border-top: 1px solid var(--line);
@@ -532,6 +551,7 @@ body {
 }
 .valid-panel .err { color: var(--bad); }
 .valid-panel .warn { color: var(--warn); }
+.valid-panel a { color: inherit; font-weight: 700; text-underline-offset: 3px; }
 
 /* ---------- 底部 / toast ---------- */
 .foot {
@@ -571,9 +591,79 @@ body {
   .pane { min-height: 320px; }
 }
 @media (max-width: 600px) {
+  .topbar {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .brand { min-width: 0; flex: 1 1 100%; }
+  .brand h1 em { display: inline; }
+  .actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40px minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 6px;
+  }
+  .actions .btn {
+    min-width: 0;
+    min-height: 40px;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 7px;
+    font-size: 11.5px;
+    white-space: nowrap;
+  }
+  .actions .btn.icon-round { width: 40px; min-width: 40px; height: 40px; padding: 0; }
+  .actions #btnCopy { grid-column: 1 / -1; width: 100%; }
+  .workspace { padding-right: 10px; padding-left: 10px; }
+  .pane { min-width: 0; }
   .pane-toolbar { position: relative; }
-  .picker-slot { position: static; }
-  .level-picker-slot { position: static; }
+  .editor-pane .pane-toolbar { gap: 8px; }
+  .editor-pane .pane-toolbar > strong { flex: 1 1 100%; }
+  .editor-pane .pane-toolbar > .spacer { display: none; }
+  .picker-slot {
+    position: static;
+    display: grid;
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .picker-btn {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    gap: 6px;
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+  .picker-btn .picker-name,
+  .picker-btn .picker-count {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .level-picker-slot { position: static; flex: 1 1 190px; min-width: 0; }
+  .level-picker-btn { width: 100%; max-width: none; justify-content: center; }
+  .motion-mode-btn { flex: 0 0 auto; }
+  .author-field { flex: 1 1 100%; min-width: 0; }
+  .author-field input { width: auto; min-width: 0; flex: 1; }
+  #editor { width: 100%; min-width: 0; }
+  .preview-pane .pane-toolbar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+  }
+  .preview-pane .pane-toolbar > .spacer { display: none; }
+  .preview-pane .badge { justify-self: start; }
+  .preview-pane .width-toggle {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+  .preview-pane .width-toggle .btn { justify-content: center; min-height: 36px; }
   .picker-pop { left: 16px; right: 16px; top: calc(100% + 6px); width: auto; max-width: none; }
   .level-pop { left: 16px; right: 16px; top: calc(100% + 6px); width: auto; max-width: none; }
   .pop-grid { grid-template-columns: 1fr; }
