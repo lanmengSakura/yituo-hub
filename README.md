@@ -31,7 +31,7 @@
 ## 快速开始
 
 ```bash
-git clone <本仓库>
+git clone https://github.com/yan9651688/yituo-hub.git
 cd yituo-hub
 python3 -m http.server 8123
 # 打开 http://localhost:8123
