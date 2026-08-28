@@ -17,7 +17,7 @@
     { id: 'motion-themed-frame', order: 6, name: '完整主题动效', short: '完整主题动效', description: '严格使用由 V24 静态终稿派生的 V6 完整动态模板，正文保持可编辑。', motion: 'production-v6-full' }
   ];
 
-  /* themeId 是 Yi Tuo Hub 内部 ID；styleId 是 Production V6 资产 ID。 */
+  /* themeId 是 YI TUO HUB STUDIO 内部 ID；styleId 是 Production V6 资产 ID。 */
   var PROFILES = [
     { themeId: 'vermilion', styleId: 'editorial-vermilion', name: '墨红社论', school: 'editorial', bestFor: '深度观点、评论', paper: '#FFFFFF', surface: '#FBFAF8', ink: '#201F1D', muted: '#777168', accent: '#B33A2B', accent2: '#E4C5B8', line: '#DDD8D0', radius: 0, border: 1, header: 'masthead', section: 'rule-number', brief: 'columns', quote: 'oversize', finish: 'signature', density: 'airy', backgroundMode: 'white', accentOn: '#FFFFFF' },
     { themeId: 'mono-gold', styleId: 'mono-gold-journal', name: '黑金刊读', school: 'editorial', bestFor: '品牌观点、专业长文', paper: '#FFFFFF', surface: '#FBFAF6', ink: '#171714', muted: '#6D675B', accent: '#87682F', accent2: '#D8CCAE', line: '#C7BEAD', radius: 4, border: 1, header: 'luxury-rule', section: 'roman', brief: 'ledger', quote: 'centered', finish: 'thin-rule', density: 'airy', backgroundMode: 'white', accentOn: '#FFFFFF' },

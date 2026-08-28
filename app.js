@@ -1,4 +1,4 @@
-/* Yi Tuo Hub 排版工坊前端
+/* YI TUO HUB STUDIO 排版工坊前端
  * - 基础主题：18 套原有版式
  * - 高级排版：蓝梦原创的 15 套 Production V6 主题 × 6 档视觉等级
  */

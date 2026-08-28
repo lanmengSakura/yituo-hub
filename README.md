@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# Yi Tuo Hub · 公众号排版工坊
+# YI TUO HUB STUDIO · 公众号排版工坊
 
 **把 Markdown 一键排成可直接粘贴进微信公众号编辑器的精致 HTML**
 
@@ -43,7 +43,7 @@
 <table>
 <tr>
 <td width="50%" align="center"><img src="assets/landing-preview.png" width="100%"><br><sub><b>电影感首页 · 照片级雪山 + 云雾漂移 + 鼠标视差</b></sub></td>
-<td width="50%" align="center"><img src="assets/studio-preview.png" width="100%"><br><sub><b>排版工坊 · 粘贴即所得，右侧实时预览</b></sub></td>
+<td width="50%" align="center"><img src="assets/advanced-preview.png" width="100%"><br><sub><b>高级排版 · 素金手记（黑金刊读）L4 静态终稿，15 套高级排版之一</b></sub></td>
 </tr>
 </table>
 
@@ -82,8 +82,8 @@ L5、L6 右侧会出现「动态 / 静态回退」切换。两份输出使用同
 ## 🚀 快速开始
 
 ```bash
-git clone https://github.com/yan9651688/yituo-hub.git
-cd yituo-hub
+git clone https://github.com/yan9651688/yituo-hub-studio.git
+cd yituo-hub-studio
 python3 -m http.server 8123
 # 打开 http://localhost:8123 —— 首页
 # 打开 http://localhost:8123/studio.html —— 排版工坊
@@ -102,7 +102,7 @@ npm test
 
 ```bash
 ./deploy.sh root@你的服务器IP                          # rsync + nginx reload
-docker build -t yituo-hub . && docker run -d -p 80:80 yituo-hub
+docker build -t yituo-hub-studio . && docker run -d -p 80:80 yituo-hub-studio
 ```
 
 ## ⌨️ 输入语法速览

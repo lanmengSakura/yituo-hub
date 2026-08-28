@@ -1,8 +1,8 @@
 {
-  "name": "yituo-hub",
+  "name": "yituo-hub-studio",
   "version": "1.0.0",
   "private": true,
-  "description": "Yi Tuo Hub 公众号排版工坊",
+  "description": "YI TUO HUB STUDIO 公众号排版工坊",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "test": "node test.js",
