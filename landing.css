@@ -31,7 +31,7 @@
 }
 
 /* 鼠标动效：小点即时 + 圆环延迟追随 */
-body.landing, body.landing a, body.landing button { cursor: none; }
+body.landing.cursor-ready, body.landing.cursor-ready a, body.landing.cursor-ready button { cursor: none; }
 .cursor-dot {
   position: fixed;
   z-index: 200;

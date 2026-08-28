@@ -94,7 +94,8 @@
   }, { passive: true });
 
   /* 鼠标动效：小点即时跟随 + 圆环延迟追随，悬停交互元素放大 */
-  if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  try {
+    if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var dot = document.createElement('div'); dot.className = 'cursor-dot';
     var ring = document.createElement('div'); ring.className = 'cursor-ring';
     document.body.appendChild(dot); document.body.appendChild(ring);
@@ -110,6 +111,11 @@
       ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
       requestAnimationFrame(loop);
     })();
+      document.body.classList.add('cursor-ready');
+    }
+  } catch (e) {
+    var d = document.querySelector('.cursor-dot'), r = document.querySelector('.cursor-ring');
+    if (d) d.remove(); if (r) r.remove();
   }
 })();
 </script>
