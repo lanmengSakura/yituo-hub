@@ -1,4 +1,4 @@
-> 🤝 **本项目由 [颜](https://github.com/yan9651688) × 蓝梦（[lanmengSakura](https://github.com/lanmengSakura)）联合打造** —— 排版引擎与产品体验来自颜，动效组件库来自蓝梦的 wechat-motion-layout-studio（已获授权）。
+> 🤝 **本项目由 [颜](https://github.com/yan9651688) × 蓝梦（[lanmengSakura](https://github.com/lanmengSakura)）联合打造** —— 排版引擎与产品体验来自颜，动效组件库来自蓝梦的 wechat-motion-layout-studio。
 
 <div align="center">
 
@@ -53,7 +53,7 @@
 
 ## ✨ 动效组件库
 
-75 个纯 SMIL 动画 SVG（15 套风格 × 5 角色），`motion/` 目录整库分发，已获作者授权：
+75 个纯 SMIL 动画 SVG（15 套风格 × 5 角色），`motion/` 目录整库分发：
 
 | 角色 | 说明 |
 |------|------|
@@ -128,8 +128,8 @@ docker build -t yituo-hub . && docker run -d -p 80:80 yituo-hub
 ## 🙏 致谢
 
 - [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)（AGPL-3.0，甲木 × 摸鱼小李）——本项目的排版工作流、平台红线标准与「经典复刻」组主题的配色来源
-- [wechat-motion-layout-studio](https://github.com/lanmengSakura/wechat-motion-layout-studio)（蓝梦）——动效组件库与「动效系列」主题的风格来源，已获作者授权
+- [wechat-motion-layout-studio](https://github.com/lanmengSakura/wechat-motion-layout-studio)（蓝梦）——动效组件库与「动效系列」主题的风格来源
 
 ## 📄 License
 
-[AGPL-3.0](LICENSE)。基于 gzh-design-skill 二次开发，修改与分发须遵循同一协议并保留原项目署名；`motion/` 动效库版权归蓝梦所有，经授权随本项目分发。
+[AGPL-3.0](LICENSE)。基于 gzh-design-skill 二次开发，修改与分发须遵循同一协议并保留原项目署名；`motion/` 动效库版权归蓝梦所有。
