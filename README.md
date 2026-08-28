@@ -22,8 +22,7 @@
 
 ## 🌐 在线体验
 
-- **排版工坊**：<https://studio.yituohub.com/studio.html> —— 粘贴、选主题、复制，三步出稿
-- **首页**：<https://studio.yituohub.com>
+- **<https://studio.yituohub.com>** —— 打开首页，点「开始排版」即可
 
 ## ✨ 核心特性
 
