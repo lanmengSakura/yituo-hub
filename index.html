@@ -46,34 +46,14 @@
 </header>
 
 <main class="scene">
-  <div class="layer" data-depth="0.35">
-    <div class="mtn mtn-far">
-      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-        <path fill="#D9E3EC" d="M0 300 L120 208 L210 252 L330 150 L432 226 L540 96 L648 210 L760 128 L900 232 L1010 170 L1130 250 L1250 190 L1360 258 L1440 220 L1440 560 L0 560 Z"/>
-        <path fill="#E9F0F5" d="M540 96 L586 152 L560 158 L520 128 Z M330 150 L362 190 L338 196 L308 172 Z M760 128 L798 176 L772 180 L736 152 Z"/>
-      </svg>
-    </div>
+  <div class="layer" data-depth="0.3">
+    <div class="hero-photo" role="img" aria-label="云海之上的层叠雪山"></div>
   </div>
+  <div class="hero-veil"></div>
 
   <div class="fog fog-a"></div>
 
-  <div class="layer" data-depth="0.65">
-    <div class="mtn mtn-mid">
-      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-        <path fill="#C3D2DF" d="M0 380 L140 300 L260 356 L400 246 L540 330 L680 232 L820 318 L960 258 L1100 336 L1240 280 L1360 340 L1440 310 L1440 560 L0 560 Z"/>
-      </svg>
-    </div>
-  </div>
-
   <div class="fog fog-b"></div>
-
-  <div class="layer" data-depth="1">
-    <div class="mtn mtn-near">
-      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-        <path fill="#A9BDCD" d="M0 460 L160 396 L300 444 L460 368 L620 440 L780 382 L940 448 L1100 396 L1260 452 L1380 416 L1440 442 L1440 560 L0 560 Z"/>
-      </svg>
-    </div>
-  </div>
 
   <div class="fog fog-c"></div>
 
@@ -112,6 +92,25 @@
       el.style.transform = 'translate3d(' + (mx * d * 42).toFixed(1) + 'px,' + (my * d * 16).toFixed(1) + 'px,0)';
     });
   }, { passive: true });
+
+  /* 鼠标动效：小点即时跟随 + 圆环延迟追随，悬停交互元素放大 */
+  if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var dot = document.createElement('div'); dot.className = 'cursor-dot';
+    var ring = document.createElement('div'); ring.className = 'cursor-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var tx = innerWidth / 2, ty = innerHeight / 2, rx = tx, ry = ty;
+    addEventListener('mousemove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      dot.style.left = tx + 'px'; dot.style.top = ty + 'px';
+      var t = e.target;
+      ring.classList.toggle('hover', !!(t.closest && t.closest('a, button')));
+    }, { passive: true });
+    (function loop() {
+      rx += (tx - rx) * 0.16; ry += (ty - ry) * 0.16;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(loop);
+    })();
+  }
 })();
 </script>
 </body>

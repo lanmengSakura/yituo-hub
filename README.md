@@ -35,7 +35,7 @@
 
 <table>
 <tr>
-<td width="50%" align="center"><img src="assets/landing-preview.png" width="100%"><br><sub><b>电影感首页 · 雪山云雾 + 鼠标视差</b></sub></td>
+<td width="50%" align="center"><img src="assets/landing-preview.png" width="100%"><br><sub><b>电影感首页 · 照片级雪山 + 云雾漂移 + 鼠标视差</b></sub></td>
 <td width="50%" align="center"><img src="assets/studio-preview.png" width="100%"><br><sub><b>排版工坊 · 粘贴即所得，右侧实时预览</b></sub></td>
 </tr>
 </table>
@@ -129,6 +129,7 @@ docker build -t yituo-hub . && docker run -d -p 80:80 yituo-hub
 
 - [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)（AGPL-3.0，甲木 × 摸鱼小李）——本项目的排版工作流、平台红线标准与「经典复刻」组主题的配色来源
 - [wechat-motion-layout-studio](https://github.com/lanmengSakura/wechat-motion-layout-studio)（蓝梦）——动效组件库与「动效系列」主题的风格来源
+- 首页雪山摄影来自 [Pexels](https://www.pexels.com/)（免费商用许可）
 
 ## 📄 License
 

@@ -18,11 +18,51 @@
 
 .layer { position: absolute; inset: 0; will-change: transform; transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); pointer-events: none; }
 
-.mtn { position: absolute; left: 0; right: 0; bottom: -2px; width: 100%; height: 68vh; }
-.mtn svg { display: block; width: 100%; height: 100%; }
-.mtn-far  { height: 74vh; }
-.mtn-mid  { height: 60vh; }
-.mtn-near { height: 44vh; }
+/* 照片级雪山：Pexels 免版权图（assets/mountains-hero.jpg），微放大留出视差余量 */
+.hero-photo {
+  position: absolute;
+  inset: -4%;
+  background: url('assets/mountains-hero.jpg') center 42% / cover no-repeat;
+}
+.hero-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(244,246,248,.5) 0%, rgba(244,246,248,.08) 42%, rgba(244,246,248,.3) 100%);
+}
+
+/* 鼠标动效：小点即时 + 圆环延迟追随 */
+body.landing, body.landing a, body.landing button { cursor: none; }
+.cursor-dot {
+  position: fixed;
+  z-index: 200;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dark);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  position: fixed;
+  z-index: 200;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(29, 48, 69, 0.4);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s var(--ease), height 0.25s var(--ease), border-color 0.25s, background 0.25s;
+}
+.cursor-ring.hover {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(29, 48, 69, 0.75);
+  background: rgba(255, 255, 255, 0.14);
+}
+@media (pointer: coarse) {
+  body.landing, body.landing a, body.landing button { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
+}
 
 @keyframes drift {
   from { transform: translateX(-3.5%); }
