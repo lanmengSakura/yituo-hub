@@ -431,6 +431,10 @@
     }
 
     var out = [coverHtml];
+    var motionBlocks = opt.motion || [];
+    for (var m = 0; m < motionBlocks.length; m++) {
+      out.push('<section style="margin:4px 0;text-align:center;">' + motionBlocks[m] + '</section>');
+    }
     if (introQuote) {
       introQuote.author = introQuote.author || (opt.author ? opt.author : '');
       out.push(buildQuote(spec, introQuote));

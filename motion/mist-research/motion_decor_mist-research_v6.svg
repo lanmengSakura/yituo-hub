@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" width="100%" role="img" aria-label="雾蓝研究章节标题复用装饰" style="display:block;width:100%;height:auto;">
+
+<path data-unit="mist.decor.baseline.v2" d="M18 153C72 146 111 158 155 151C195 145 225 157 262 151" fill="none" stroke="#4F7489" stroke-width="1" />
+<g data-unit="mist.decor.fog-vessel.v2" transform="translate(24 145) scale(.94)"><g data-unit="mist.layered-open-contours.v2" fill="none" stroke="#B8CCD6" stroke-width=".8"><path d="M0 0C24-22 48-24 72-7C98 12 122 0 148-25C176-50 205-45 236-15" /><path d="M8 6C32-12 52-13 74 1C99 18 125 8 151-14C175-34 198-30 225-11" /><path d="M20 12C40-2 58-3 78 9C103 24 128 17 153 0C173-14 190-12 210-5" /></g></g>
+<g data-unit="mist.decor.lens.v2" transform="translate(176 73)"><circle r="38" fill="none" stroke="#4F7489" stroke-width="1.1" /><circle r="25" fill="none" stroke="#D2DEE3" stroke-width=".75" /><path d="M27 27L53 53" stroke="#4F7489" stroke-width="1.45" /></g>
+<path data-unit="mist.decor.evidence-path.v2" d="M48 129C86 92 119 111 150 124C179 136 202 112 234 96" fill="none" stroke="#4F7489" stroke-width="1.2" />
+<g data-unit="mist.decor.sample-nodes.v2" fill="#4F7489"><circle cx="48" cy="129" r="3" /><circle cx="86" cy="101" r="4" fill="#B8CCD6" /><circle cx="150" cy="124" r="3" /><circle cx="234" cy="96" r="4" /><animate attributeName="opacity" values="1;.52;1" dur="5.6s" begin="0s" repeatCount="indefinite"></animate></g>
+<path data-unit="mist.decor.specimen-card.v2" d="M96 52L138 45L146 92L104 98Z" fill="white" stroke="#4F7489" stroke-width=".8" /><path d="M108 63L132 59M110 72L134 68M112 81L128 78" stroke="#B8CCD6" stroke-width=".7" />
+</svg>

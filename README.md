@@ -14,6 +14,7 @@
 - **粘贴不掉样式**——产物全部内联样式 + `<span leaf>` 包裹，严守公众号编辑器红线，内置合规校验器实时兜底
 - **确定性智能**——每段第一个加粗自动升级为主题色关键词下划线、`==高亮==`/`++下划线==` 扩展语法、章节自动编号 + 英文标签、引言卡、导读目录、签名区自动合并、中英标点全角化
 - **一键复制**——富文本直接进剪贴板，公众号编辑器 ⌘V 即达
+- **动效组件库**——75 个 SMIL 动画 SVG（15 套风格 × 主标题/章节标题/装饰/边框/尾饰），工坊内预览、一键插入封面下方或复制 SVG，公众号原生支持
 - **零构建零后端**——纯静态文件，任何一台 nginx 都能跑
 
 ![排版工坊](assets/studio-preview.png)
@@ -73,7 +74,7 @@ docker build -t yituo-hub . && docker run -d -p 80:80 yituo-hub
 ## 致谢
 
 - [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)（AGPL-3.0，甲木 × 摸鱼小李）——本项目的排版工作流、平台红线与"经典复刻"组主题的配色来源
-- [wechat-motion-layout-studio](https://github.com/lanmengSakura/wechat-motion-layout-studio)（蓝梦）——"动效系列"15 套主题为对其视觉风格的参数化自研复刻，未包含其原始资产
+- [wechat-motion-layout-studio](https://github.com/lanmengSakura/wechat-motion-layout-studio)（蓝梦）——"动效系列"15 套主题与 75 个动效 SVG 组件库（`motion/`）来自该项目，**已获作者授权**
 
 ## 作者
 

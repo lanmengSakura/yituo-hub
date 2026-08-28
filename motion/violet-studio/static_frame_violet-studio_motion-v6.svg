@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 410" width="100%" role="img" aria-label="紫灰工作室完整开篇强调框" style="display:block;width:100%;height:auto;">
+
+<path data-unit="violet.frame.top-route.v16" d="M80 154V92C80 70 92 58 114 58H288M462 58H638C660 58 672 70 672 92V154" fill="none" stroke="#705B8C" stroke-width="1.08" />
+<path data-unit="violet.frame.bottom-route.v16" d="M80 258V326C80 348 92 360 114 360H292M458 360H638C660 360 672 348 672 326V258" fill="none" stroke="#705B8C" stroke-width="1.08" />
+<path data-unit="violet.frame.route-echo.v16" d="M94 146V98C94 82 102 72 118 72H246M504 72H634C650 72 658 82 658 98V146M94 266V320C94 336 102 346 118 346H238M512 346H634C650 346 658 336 658 320V266" fill="none" stroke="#DDD7E1" stroke-width=".68" />
+<g data-unit="violet.frame.corner-nodes.v16"><circle cx="80" cy="154" r="5.8" fill="white" stroke="#705B8C" stroke-width="1" /><circle cx="80" cy="154" r="2.5" fill="#705B8C" /><circle cx="672" cy="154" r="3.6" fill="#B4C185" /><circle cx="80" cy="326" r="5" fill="#B4C185" /><circle cx="672" cy="326" r="5.8" fill="white" stroke="#705B8C" stroke-width="1" /><circle cx="672" cy="326" r="2.5" fill="#D88963" /></g>
+<path data-unit="violet.frame.dotted-corners.v16" d="M94 112V84H126M624 72H648V108M94 300V334H132M618 346H648V312" fill="none" stroke="#705B8C" stroke-width=".72" stroke-dasharray="2.2 3.4" />
+<g data-unit="violet.frame.signal-ticks.v16" stroke="#705B8C" stroke-width=".7"><path d="M80 176V192M80 205V213M672 178V194M672 210V220M80 280V294M672 278V292" /></g>
+<g data-unit="violet.frame.top-index.v16"><circle cx="304" cy="58" r="2.2" fill="#B4C185" /><circle cx="318" cy="58" r="2.2" fill="#705B8C" /><circle cx="332" cy="58" r="2.2" fill="#D88963" /><path d="M344 58H412" stroke="#DDD7E1" stroke-width=".7" /></g>
+<g data-unit="violet.frame.dot-matrix.v16" transform="translate(110 100)" fill="#705B8C"><circle cx="0" cy="0" r=".8" /><circle cx="7" cy="0" r=".8" /><circle cx="14" cy="0" r=".8" /><circle cx="0" cy="7" r=".8" /><circle cx="7" cy="7" r=".8" /><circle cx="14" cy="7" r=".8" /></g>
+<path data-unit="violet.frame.continuity-spine.v16" d="M30 386C127 376 189 392 265 386C341 379 410 393 485 386C568 378 637 391 720 384" fill="none" stroke="#705B8C" stroke-width=".86" opacity=".34" /><path data-unit="violet.frame.continuity-spine.v16.motion-trail.v4" data-motion-role="flow-trail" d="M30 386C127 376 189 392 265 386C341 379 410 393 485 386C568 378 637 391 720 384" fill="none" stroke="#705B8C" stroke-width="1.86" stroke-linecap="round" opacity=".94" stroke-dasharray="120 942" />
+<path data-unit="violet.frame.spine-echo.v16" d="M58 394C189 390 258 396 347 393" fill="none" stroke="#B4C185" stroke-width=".5" />
+</svg>
