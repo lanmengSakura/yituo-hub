@@ -266,7 +266,6 @@
     var h = '<div class="motion-panel">'
       + '<div class="motion-head"><div>'
       + '<p class="hero-eyebrow">Motion Components · 动效组件库</p>'
-      + '<p class="motion-src">来自 蓝梦 wechat-motion-layout-studio · 已获授权 · SMIL 动画，公众号直接支持</p>'
       + '</div><button class="btn icon-round" id="motionClose" aria-label="关闭">✕</button></div>'
       + '<div class="motion-body"><div class="motion-nav">';
     STYLE_META.forEach(function (s) {
